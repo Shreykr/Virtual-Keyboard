@@ -140,6 +140,13 @@ button .front .keyboard__btn-2 {
   margin-left: 5px;
 }
 
+.indicator {
+  align-self: flex-start;
+  color: green;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
 .pushable {
   position: relative;
   border: none;
