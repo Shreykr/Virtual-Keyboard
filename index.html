@@ -6,519 +6,533 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+
     <title>Virtual keyboard</title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="close-container">
-            <button class="keyboard__btn pushable" id="close-button">
-                <span class="shadow"></span>
-                <span class="edge"></span>
-                <div class="front">
-                    X
-                </div>
-            </button>
+    <section>
+        <div class="textarea-container">
+            <p>
+                <label for="some-input">Type something lol</label>
+            </p>
+            <textarea type="text" rows="4" columns="150" id="some-input" value="gg"></textarea>
         </div>
-        <div class="keyboard">
-            <div class="keyboard__row row-1">
-                <button class="keyboard__btn pushable" id="key-zero">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        <div class="keyboard__btn-1">~</div>
-                        <div class="keyboard__btn-2 ">`</div>
-                    </div>
-                </button>
-                <button class="keyboard__btn pushable" id="key-1">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        <div class="keyboard__btn-1">!</div>
-                        <div class="keyboard__btn-2">1</div>
-                    </div>
-
-                </button>
-                <button class="keyboard__btn pushable" id="key-2">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        <div class="keyboard__btn-1 at">@</div>
-                        <div class="keyboard__btn-2">2</div>
-                    </div>
-                </button>
-                <button class="keyboard__btn pushable" id="key-3">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        <div class="keyboard__btn-1">#</div>
-                        <div class="keyboard__btn-2">3</div>
-                    </div>
-                </button>
-                <button class="keyboard__btn pushable" id="key-4">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        <div class="keyboard__btn-1">$</div>
-                        <div class="keyboard__btn-2">4</div>
-                    </div>
-                </button>
-                <button class="keyboard__btn pushable" id="key-5">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        <div class="keyboard__btn-1">%</div>
-                        <div class="keyboard__btn-2">5</div>
-                    </div>
-                </button>
-                <button class="keyboard__btn pushable" id="key-6">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        <div class="keyboard__btn-1 ">^</div>
-                        <div class="keyboard__btn-2">6</div>
-                    </div>
-                </button>
-                <button class="keyboard__btn pushable" id="key-7">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        <div class="keyboard__btn-1">&</div>
-                        <div class="keyboard__btn-2">7</div>
-                    </div>
-                </button>
-                <button class="keyboard__btn pushable" id="key-8">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        <div class="keyboard__btn-1">*</div>
-                        <div class="keyboard__btn-2">8</div>
-                    </div>
-                </button>
-                <button class="keyboard__btn pushable" id="key-9">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        <div class="keyboard__btn-1">(</div>
-                        <div class="keyboard__btn-2">9</div>
-                    </div>
-                </button>
-                <button class="keyboard__btn pushable" id="key-0">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        <div class="keyboard__btn-1">)</div>
-                        <div class="keyboard__btn-2">0</div>
-                    </div>
-                </button>
-                <button class="keyboard__btn pushable" id="key-minus">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        <div class="keyboard__btn-1">_</div>
-                        <div class="keyboard__btn-2">-</div>
-                    </div>
-                </button>
-                <button class="keyboard__btn pushable" id="key-equals">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        <div class="keyboard__btn-1">+</div>
-                        <div class="keyboard__btn-2">=</div>
-                    </div>
-                </button>
-                <button class="keyboard__btn pushable" id="key-delete">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        <div class="bottom-right">delete</div>
-                    </div>
-                </button>
-            </div>
-            <div class="keyboard__row row-2">
-                <button class="keyboard__btn pushable" id="key-tab">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        <div class="bottom-left">tab</div>
-                    </div>
-                </button>
-                <button class="keyboard__btn alphabet pushable" id="key-q">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        Q
-                    </div>
-                </button>
-                <button class="keyboard__btn alphabet pushable" id="key-w">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        W
-                    </div>
-                </button>
-                <button class="keyboard__btn alphabet pushable" id="key-e">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        E
-                    </div>
-                </button>
-                <button class="keyboard__btn alphabet pushable" id="key-r">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        R
-                    </div>
-                </button>
-                <button class="keyboard__btn alphabet pushable" id="key-t">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        T
-                    </div>
-                </button>
-                <button class="keyboard__btn alphabet pushable" id="key-y">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        Y
-                    </div>
-                </button>
-                <button class="keyboard__btn alphabet pushable" id="key-u">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        U
-                    </div>
-                </button>
-                <button class="keyboard__btn alphabet pushable" id="key-i">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        I
-                    </div>
-                </button>
-                <button class="keyboard__btn alphabet pushable" id="key-o">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        O
-                    </div>
-                </button>
-                <button class="keyboard__btn alphabet pushable" id="key-p">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        P
-                    </div>
-                </button>
-                <button class="keyboard__btn pushable" id="key-open-brackets">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        <div class="keyboard__btn-1">{</div>
-                        <div class="keyboard__btn-2">[</div>
-                    </div>
-                </button>
-                <button class="keyboard__btn pushable" id="key-close_brackets">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        <div class="keyboard__btn-1">}</div>
-                        <div class="keyboard__btn-2">]</div>
-                    </div>
-                </button>
-                <button class="keyboard__btn pushable" id="key-divide">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        <div class="keyboard__btn-1">|</div>
-                        <div class="keyboard__btn-2">\</div>
-                    </div>
-                </button>
-            </div>
-            <div class="keyboard__row row-3">
-                <button class="keyboard__btn pushable" id="key-caps">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        <div class="indicator">&#9679;</div>
-                        <div class="bottom-left">caps lock</div>
-                    </div>
-                </button>
-                <button class="keyboard__btn alphabet pushable" id="key-a">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        A
-                    </div>
-                </button>
-                <button class="keyboard__btn alphabet pushable" id="key-s">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        S
-                    </div>
-                </button>
-                <button class="keyboard__btn alphabet pushable" id="key-d">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        D
-                    </div>
-                </button>
-                <button class="keyboard__btn alphabet pushable" id="key-f">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        F
-                    </div>
-                </button>
-                <button class="keyboard__btn alphabet pushable" id="key-g">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        G
-                    </div>
-                </button>
-                <button class="keyboard__btn alphabet pushable" id="key-h">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        H
-                    </div>
-                </button>
-                <button class="keyboard__btn alphabet pushable" id="key-j">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        J
-                    </div>
-                </button>
-                <button class="keyboard__btn alphabet pushable" id="key-k">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        K
-                    </div>
-                </button>
-                <button class="keyboard__btn alphabet pushable" id="key-l">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        L
-                    </div>
-                </button>
-                <button class="keyboard__btn pushable" id="key-semicolon">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        <div class="keyboard__btn-1">:</div>
-                        <div class="keyboard__btn-2">;</div>
-                    </div>
-                </button>
-                <button class="keyboard__btn pushable" id="key-apostrophe">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        <div class="keyboard__btn-1">'</div>
-                        <div class="keyboard__btn-2">"</div>
-                    </div>
-                </button>
-                <button class="keyboard__btn pushable" id="key-return">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        <div class="bottom-right">return</div>
-                    </div>
-                </button>
-            </div>
-            <div class="keyboard__row row-4">
-                <button class="keyboard__btn pushable" id="key-shift-l">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        <div class="indicator">&#9679;</div>
-                        <div class="bottom-left">shift</div>
-                    </div>
-                </button>
-                <button class="keyboard__btn alphabet pushable" id="key-z">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        Z
-                    </div>
-                </button>
-                <button class="keyboard__btn alphabet pushable" id="key-x">
+    </section>
+    <section>
+        <div class="container">
+            <div class="close-container">
+                <div class="keyboard__btn pushable" id="close-button">
                     <span class="shadow"></span>
                     <span class="edge"></span>
                     <div class="front">
                         X
                     </div>
-                </button>
-                <button class="keyboard__btn alphabet pushable" id="key-c">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        C
-                    </div>
-                </button>
-                <button class="keyboard__btn alphabet pushable" id="key-v">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        V
-                    </div>
-                </button>
-                <button class="keyboard__btn alphabet pushable" id="key-b">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        B
-                    </div>
-                </button>
-                <button class="keyboard__btn alphabet pushable" id="key-n">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        N
-                    </div>
-                </button>
-                <button class="keyboard__btn alphabet pushable" id="key-m">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        M
-                    </div>
-                </button>
-                <button class="keyboard__btn pushable" id="key-comma">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        <div class="keyboard__btn-1">&#60;</div>
-                        <div class="keyboard__btn-2">,</div>
-                    </div>
-                </button>
-                <button class="keyboard__btn pushable" id="key-dot">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        <div class="keyboard__btn-1">&#62;</div>
-                        <div class="keyboard__btn-2">.</div>
-                    </div>
-                </button>
-                <button class="keyboard__btn pushable" id="key-slash">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        <div class="keyboard__btn-1">?</div>
-                        <div class="keyboard__btn-2">/</div>
-                    </div>
-                </button>
-                <button class="keyboard__btn pushable" id="key-shift-r">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        <div class="bottom-right">shift</div>
-                    </div>
-                </button>
+                </div>
             </div>
-            <div class="keyboard__row row-5">
-                <button class="keyboard__btn pushable" id="key-function">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        <div class="top-right">fn</div>
-                        <div class="globe-left">🌐</div>
+            <div class="keyboard">
+                <div class="keyboard__row row-1">
+                    <div class="keyboard__btn pushable" id="key-zero">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div class="keyboard__btn-1">~</div>
+                            <div class="keyboard__btn-2 ">`</div>
+                        </div>
                     </div>
-                </button>
-                <button class="keyboard__btn pushable" id="key-control">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        <div class="top-right">^</div>
-                        <div>control</div>
+                    <div class="keyboard__btn pushable" id="key-1">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div class="keyboard__btn-1">!</div>
+                            <div class="keyboard__btn-2">1</div>
+                        </div>
+
                     </div>
-                </button>
-                <button class="keyboard__btn pushable" id="key-option-l">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        <div class="top-right">⌥</div>
-                        <div>option</div>
+                    <div class="keyboard__btn pushable" id="key-2">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div class="keyboard__btn-1 at">@</div>
+                            <div class="keyboard__btn-2">2</div>
+                        </div>
                     </div>
-                </button>
-                <button class="keyboard__btn pushable" id="key-command-l">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        <div class="top-right">⌘</div>
-                        <div>command</div>
+                    <div class="keyboard__btn pushable" id="key-3">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div class="keyboard__btn-1">#</div>
+                            <div class="keyboard__btn-2">3</div>
+                        </div>
                     </div>
-                </button>
-                <button class="keyboard__btn pushable" id="key-space">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        space
+                    <div class="keyboard__btn pushable" id="key-4">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div class="keyboard__btn-1">$</div>
+                            <div class="keyboard__btn-2">4</div>
+                        </div>
                     </div>
-                </button>
-                <button class="keyboard__btn pushable" id="key-command-r">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        <div class="top-left">⌘</div>
-                        <div>command</div>
+                    <div class="keyboard__btn pushable" id="key-5">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div class="keyboard__btn-1">%</div>
+                            <div class="keyboard__btn-2">5</div>
+                        </div>
                     </div>
-                </button>
-                <button class="keyboard__btn pushable" id="key-option-r">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <div class="front">
-                        <div class="top-left">⌥</div>
-                        <div>option</div>
+                    <div class="keyboard__btn pushable" id="key-6">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div class="keyboard__btn-1 ">^</div>
+                            <div class="keyboard__btn-2">6</div>
+                        </div>
                     </div>
-                </button>
-                <div class="arrow-group">
-                    <div class="arrow-row-1">
-                        <button class="keyboard__btn pushable" id="up-arrow">
-                            <span class="shadow"></span>
-                            <span class="edge"></span>
-                            <div class="front">
-                                &#8593;
+                    <div class="keyboard__btn pushable" id="key-7">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div class="keyboard__btn-1">&</div>
+                            <div class="keyboard__btn-2">7</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn pushable" id="key-8">
+                        <span class="shadow keyboard__btn"></span>
+                        <span class="edge keyboard__btn"></span>
+                        <div class="front">
+                            <div class="keyboard__btn-1">*</div>
+                            <div class="keyboard__btn-2">8</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn pushable" id="key-9">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div class="keyboard__btn-1">(</div>
+                            <div class="keyboard__btn-2">9</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn pushable" id="key-0">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div class="keyboard__btn-1">)</div>
+                            <div class="keyboard__btn-2">0</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn pushable" id="key-minus">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div class="keyboard__btn-1">_</div>
+                            <div class="keyboard__btn-2">-</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn pushable" id="key-equals">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div class="keyboard__btn-1">+</div>
+                            <div class="keyboard__btn-2">=</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn pushable" id="key-delete">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div class="bottom-right">delete</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="keyboard__row row-2">
+                    <div class="keyboard__btn pushable" id="key-tab">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div class="bottom-left">tab</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn alphabet pushable" id="key-q">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div>Q</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn alphabet pushable" id="key-w">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div>W</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn alphabet pushable" id="key-e">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div>E</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn alphabet pushable" id="key-r">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div>R</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn alphabet pushable" id="key-t">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div>T</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn alphabet pushable" id="key-y">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div>Y</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn alphabet pushable" id="key-u">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div>U</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn alphabet pushable" id="key-i">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div>I</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn alphabet pushable" id="key-o">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div>O</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn alphabet pushable" id="key-p">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div>P</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn pushable" id="key-open-brackets">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div class="keyboard__btn-1">{</div>
+                            <div class="keyboard__btn-2">[</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn pushable" id="key-close_brackets">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div class="keyboard__btn-1">}</div>
+                            <div class="keyboard__btn-2">]</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn pushable" id="key-divide">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div class="keyboard__btn-1">|</div>
+                            <div class="keyboard__btn-2">\</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="keyboard__row row-3">
+                    <div class="keyboard__btn pushable" id="key-caps">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div class="indicator">&#9679;</div>
+                            <div class="bottom-left">caps lock</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn alphabet pushable" id="key-a">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div>A</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn alphabet pushable" id="key-s">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div>S</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn alphabet pushable" id="key-d">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div>D</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn alphabet pushable" id="key-f">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div>F</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn alphabet pushable" id="key-g">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div>G</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn alphabet pushable" id="key-h">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div>H</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn alphabet pushable" id="key-j">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div>J</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn alphabet pushable" id="key-k">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div>K</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn alphabet pushable" id="key-l">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div>L</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn pushable" id="key-semicolon">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div class="keyboard__btn-1">:</div>
+                            <div class="keyboard__btn-2">;</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn pushable" id="key-apostrophe">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div class="keyboard__btn-1">'</div>
+                            <div class="keyboard__btn-2">"</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn pushable" id="key-return">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div class="bottom-right">return</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="keyboard__row row-4">
+                    <div class="keyboard__btn pushable" id="key-shift-l">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div class="indicator indicator-off">&#9679;</div>
+                            <div class="bottom-left">shift</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn alphabet pushable" id="key-z">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div>Z</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn alphabet pushable" id="key-x">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div>X</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn alphabet pushable" id="key-c">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div>C</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn alphabet pushable" id="key-v">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div>V</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn alphabet pushable" id="key-b">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div>B</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn alphabet pushable" id="key-n">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div>N</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn alphabet pushable" id="key-m">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div>M</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn pushable" id="key-comma">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div class="keyboard__btn-1">&#60;</div>
+                            <div class="keyboard__btn-2">,</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn pushable" id="key-dot">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div class="keyboard__btn-1">&#62;</div>
+                            <div class="keyboard__btn-2">.</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn pushable" id="key-slash">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div class="keyboard__btn-1">?</div>
+                            <div class="keyboard__btn-2">/</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn pushable" id="key-shift-r">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div class="indicator indicator-off" style="align-self: flex-end;margin-right:10px">&#9679;
                             </div>
-                        </button>
+                            <div class="bottom-right">shift</div>
+                        </div>
                     </div>
-                    <div class="arrow-row-2">
-                        <button class="keyboard__btn pushable" id="left-arrow">
-                            <span class="shadow"></span>
-                            <span class="edge"></span>
-                            <div class="front">
-                                &#8592;
+                </div>
+                <div class="keyboard__row row-5">
+                    <div class="keyboard__btn pushable" id="key-function">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div class="top-right">fn</div>
+                            <div class="globe-left">🌐</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn pushable" id="key-control">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div class="top-right">^</div>
+                            <div>control</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn pushable" id="key-option-l">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div class="top-right">⌥</div>
+                            <div>option</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn pushable" id="key-command-l">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div class="top-right">⌘</div>
+                            <div>command</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn pushable" id="key-space">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            space
+                        </div>
+                    </div>
+                    <div class="keyboard__btn pushable" id="key-command-r">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div class="top-left">⌘</div>
+                            <div>command</div>
+                        </div>
+                    </div>
+                    <div class="keyboard__btn pushable" id="key-option-r">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <div class="front">
+                            <div class="top-left">⌥</div>
+                            <div>option</div>
+                        </div>
+                    </div>
+                    <div class="arrow-group">
+                        <div class="arrow-row-1">
+                            <div class="keyboard__btn pushable" id="up-arrow">
+                                <span class="shadow"></span>
+                                <span class="edge"></span>
+                                <div class="front">
+                                    &#8593;
+                                </div>
                             </div>
-                        </button>
-                        <button class="keyboard__btn pushable" id="down-arrow">
-                            <span class="shadow"></span>
-                            <span class="edge"></span>
-                            <div class="front">
-                                &#8595;
+                        </div>
+                        <div class="arrow-row-2">
+                            <div class="keyboard__btn pushable" id="left-arrow">
+                                <span class="shadow"></span>
+                                <span class="edge"></span>
+                                <div class="front">
+                                    &#8592;
+                                </div>
                             </div>
-                        </button>
-                        <button class="keyboard__btn pushable" id="right-arrow">
-                            <span class="shadow"></span>
-                            <span class="edge"></span>
-                            <div class="front">
-                                &#8594;
+                            <div class="keyboard__btn pushable" id="down-arrow">
+                                <span class="shadow"></span>
+                                <span class="edge"></span>
+                                <div class="front">
+                                    &#8595;
+                                </div>
                             </div>
-                        </button>
+                            <div class="keyboard__btn pushable" id="right-arrow">
+                                <span class="shadow"></span>
+                                <span class="edge"></span>
+                                <div class="front">
+                                    &#8594;
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
+    </section>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

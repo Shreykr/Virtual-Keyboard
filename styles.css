@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
+
 /* Box sizing rules */
 *,
 *::before,
@@ -6,15 +8,7 @@
 }
 
 body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
+p {
   margin: 0;
 }
 
@@ -26,6 +20,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  font-family: "Inter", sans-serif;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -45,10 +40,37 @@ body {
 
 body {
   height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.textarea-container {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+#some-input {
+  height: 95px;
+  width: 1090px;
+  min-width: 500px;
+  max-width: 1090px;
+  font-size: 20px;
+  resize: horizontal;
+}
+
+p {
+  margin-bottom: 12px;
+  font-size: 25px;
+}
+
+input,
+textarea {
+  padding: 10px;
 }
 
 .container {
-  height: 100vh;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -56,15 +78,15 @@ body {
 }
 
 .keyboard {
-  width: 1097px;
+  width: 1090px;
   height: 380px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 10px;
+  padding: 12.5px;
   border-radius: 5px;
   background: rgb(85, 84, 84);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .keyboard__row {
@@ -78,7 +100,7 @@ body {
   grid-gap: 10px;
 }
 
-button .front .keyboard__btn-2 {
+div .front .keyboard__btn-2 {
   margin-top: 10px;
 }
 
@@ -142,9 +164,13 @@ button .front .keyboard__btn-2 {
 
 .indicator {
   align-self: flex-start;
-  color: green;
+  color: lime;
   font-weight: bold;
   margin-left: 10px;
+}
+
+.indicator-off {
+  color: grey;
 }
 
 .pushable {
@@ -197,7 +223,7 @@ button .front .keyboard__btn-2 {
   position: relative;
   height: 100%;
   border-radius: 7.5px;
-  font-size: 15px;
+  font-size: 14.5px;
   color: white;
   background: hsl(0, 0%, 8%);
   will-change: transform;
@@ -244,7 +270,7 @@ button .front .keyboard__btn-2 {
 
 #up-arrow {
   width: 75px;
-  height: 25px;
+  height: 27px;
   font-size: 1px;
   margin-bottom: 0px;
 }
