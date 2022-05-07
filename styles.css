@@ -68,6 +68,9 @@ p {
 input,
 textarea {
   padding: 10px;
+  border: 1.5px solid black;
+  outline: none;
+  border-radius: 7.5px;
 }
 
 .container {
@@ -223,7 +226,7 @@ div .front .keyboard__btn-2 {
   position: relative;
   height: 100%;
   border-radius: 7.5px;
-  font-size: 14.5px;
+  font-size: 14.55px;
   color: white;
   background: hsl(0, 0%, 8%);
   will-change: transform;

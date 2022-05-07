@@ -18,6 +18,19 @@ let shift_indicator_r = document.querySelector(
   "#key-shift-r > .front > .indicator"
 );
 
+const shiftCaseChange = () => {
+  if (upperCase_shift) {
+    alphabets.forEach((ele, index) => {
+      ele.childNodes[0].nodeValue = ele.childNodes[0].nodeValue.toLowerCase();
+    });
+  } else {
+    alphabets.forEach((ele, index) => {
+      ele.childNodes[0].nodeValue = ele.childNodes[0].nodeValue.toUpperCase();
+    });
+  }
+  upperCase_shift = !upperCase_shift;
+};
+
 const toggleCase = () => {
   if (upperCase) {
     alphabets.forEach((ele, index) => {
@@ -29,21 +42,22 @@ const toggleCase = () => {
     });
   }
   upperCase = !upperCase;
+  upperCase_shift = upperCase;
+  if (shiftToggle) {
+    shiftCaseChange();
+  }
   caps_indicator.classList.toggle("indicator-off");
 };
 
 const shiftTogglerFn = () => {
   shiftToggle = !shiftToggle;
+  shiftCaseChange();
   shift_indicator_l.classList.toggle("indicator-off");
   shift_indicator_r.classList.toggle("indicator-off");
 };
 
 const deleteCharacter = () => {
   content.value = content.value.slice(0, -1);
-};
-
-const inputText = (ele) => {
-  console.log(ele);
 };
 
 all_keys.forEach((ele, index) => {
@@ -78,6 +92,7 @@ all_keys.forEach((ele, index) => {
           : (content.value += ele.querySelector(
               ".front > div:last-child"
             ).innerText);
+        content.focus();
       });
     }
   }
