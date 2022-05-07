@@ -126,22 +126,10 @@ all_keys.forEach((ele, index) => {
       break;
     }
     case "up-arrow": {
-      ele.addEventListener("click", () => {
-        audio.play();
-        content.focus();
-      });
     }
     case "down-arrow": {
-      ele.addEventListener("click", () => {
-        audio.play();
-        content.focus();
-      });
     }
     case "left-arrow": {
-      ele.addEventListener("click", () => {
-        audio.play();
-        content.focus();
-      });
     }
     case "right-arrow": {
       ele.addEventListener("click", () => {
