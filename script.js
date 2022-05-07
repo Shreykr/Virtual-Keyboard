@@ -10,13 +10,9 @@ let alphabets = document.querySelectorAll(".alphabet > .front > div");
 
 let caps_indicator = document.querySelector("#key-caps > .front > .indicator");
 
-let body = document.querySelector("body");
-
 let textarea = document.querySelector(".textarea-container");
 
 let closeButton = document.getElementById("close-button");
-
-let overlay = document.getElementById("overlay");
 
 let shift_indicator_l = document.querySelector(
   "#key-shift-l > .front > .indicator"
@@ -30,7 +26,7 @@ let drawer = document.getElementById("drawer");
 
 let drawerStatus = false;
 
-var audio = new Audio("click.wav");
+let audio = new Audio("click.wav");
 
 const shiftCaseChange = () => {
   if (upperCase_shift) {
@@ -180,13 +176,11 @@ all_keys.forEach((ele, index) => {
 
 closeButton.addEventListener("click", () => {
   drawer.classList.remove("drawer--open");
-  body.style.justifyContent = "center";
   textarea.style.marginBottom = "20px";
   audio.play();
 });
 
 content.addEventListener("click", () => {
   drawer.classList.add("drawer--open");
-  // body.style.justifyContent = "space-around";
   textarea.style.marginBottom = "360px";
 });
