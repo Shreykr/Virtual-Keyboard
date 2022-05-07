@@ -31,7 +31,7 @@ You need to have or install the following:
 
 - Clone repo
   ```
-  git clone https://github.com/Shreykr/stopwatch.git
+  git clone https://github.com/Shreykr/Virtual-Keyboard.git
   ```
 - Navigate to project folder
 
