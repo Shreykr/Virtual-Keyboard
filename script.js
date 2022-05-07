@@ -76,7 +76,6 @@ const shiftTogglerFn = () => {
 const deleteCharacter = () => {
   content.value = content.value.slice(0, -1);
   content.focus();
-  audio.play();
 };
 
 all_keys.forEach((ele, index) => {
