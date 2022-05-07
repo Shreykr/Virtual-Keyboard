@@ -49,6 +49,7 @@ body {
 .textarea-container {
   font-size: 20px;
   margin-bottom: 20px;
+  transition: margin-bottom 0.3s ease-in-out;
 }
 
 #some-input {
@@ -90,6 +91,7 @@ textarea {
   border-radius: 5px;
   background: rgb(85, 84, 84);
   font-weight: 600;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
 }
 
 .keyboard__row {
@@ -239,14 +241,15 @@ div .front .keyboard__btn-2 {
   flex-flow: row nowrap;
   justify-content: flex-end;
   align-items: flex-end;
-  width: 1097px;
+  width: 1090px;
   height: 30px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 #close-button {
   width: 50px;
   height: 30px;
+  font-weight: bolder;
 }
 
 .arrow-group {
@@ -276,6 +279,42 @@ div .front .keyboard__btn-2 {
   height: 27px;
   font-size: 1px;
   margin-bottom: 0px;
+}
+
+.drawer__overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s ease-in;
+  z-index: 6;
+}
+
+.drawer__collapse {
+  position: fixed;
+  z-index: 7;
+  background: transparent;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 22.5px;
+  transform: translateY(500px);
+  width: 100vw;
+  height: 60vh;
+  transition: transform 0.3s ease-in;
+}
+
+.drawer--open .drawer__collapse {
+  transform: translateY(0px);
+  transition: transform 0.6s cubic-bezier(0.7, 1.31, 0.47, 1.11);
 }
 
 .pushable:hover {
