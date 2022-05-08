@@ -314,7 +314,7 @@ div .front .keyboard__btn-2 {
 
 .drawer--open .drawer__collapse {
   transform: translateY(0px);
-  transition: transform 0.6s cubic-bezier(0.7, 1.31, 0.47, 1.11);
+  transition: transform 0.6s cubic-bezier(0.28, 0.85, 0.51, 1.22);
 }
 
 .pushable:hover {

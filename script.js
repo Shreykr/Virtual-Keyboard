@@ -1,31 +1,20 @@
 let upperCase = true;
 let upperCase_shift = true;
 let shiftToggle = false;
-
 let content = document.getElementById("some-input");
-
 let all_keys = document.querySelectorAll(".keyboard__btn");
-
 let alphabets = document.querySelectorAll(".alphabet > .front > div");
-
 let caps_indicator = document.querySelector("#key-caps > .front > .indicator");
-
 let textarea = document.querySelector(".textarea-container");
-
 let closeButton = document.getElementById("close-button");
-
 let shift_indicator_l = document.querySelector(
   "#key-shift-l > .front > .indicator"
 );
-
 let shift_indicator_r = document.querySelector(
   "#key-shift-r > .front > .indicator"
 );
-
 let drawer = document.getElementById("drawer");
-
 let drawerStatus = false;
-
 let audio = new Audio("click.wav");
 
 const shiftCaseChange = () => {
