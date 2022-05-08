@@ -49,7 +49,7 @@ body {
 .textarea-container {
   font-size: 20px;
   margin-bottom: 20px;
-  transition: margin-bottom 0.3s ease-in-out;
+  transition: margin-bottom 0.45s ease-in;
 }
 
 #some-input {
@@ -281,19 +281,6 @@ div .front .keyboard__btn-2 {
   margin-bottom: 0px;
 }
 
-.drawer__overlay {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s ease-in;
-  z-index: 6;
-}
-
 .drawer__collapse {
   position: fixed;
   z-index: 7;
@@ -306,15 +293,15 @@ div .front .keyboard__btn-2 {
   right: 0;
   left: 0;
   padding: 22.5px;
-  transform: translateY(500px);
+  transform: translateY(2500px);
   width: 100vw;
   height: 60vh;
-  transition: transform 0.3s ease-in;
+  transition: transform 0.6s ease-in;
 }
 
 .drawer--open .drawer__collapse {
   transform: translateY(0px);
-  transition: transform 0.6s cubic-bezier(0.28, 0.85, 0.51, 1.22);
+  transition: transform 0.6s cubic-bezier(0.2, 0.76, 0.59, 1.08);
 }
 
 .pushable:hover {
