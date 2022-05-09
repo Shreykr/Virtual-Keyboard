@@ -16,8 +16,10 @@ let shift_indicator_r = document.querySelector(
 let drawer = document.getElementById("drawer");
 let drawerStatus = false;
 let audio = new Audio("click.wav");
-let timeout_1;
-let timeout_2;
+let deleteTimeoutTracker;
+let deleteIntervalTracker;
+let keysTimeoutTracker;
+let keysIntervalTracker;
 
 const shiftCaseChange = () => {
   if (upperCase_shift) {
@@ -62,6 +64,73 @@ const deleteCharacter = () => {
   content.focus();
 };
 
+const clearTimers = (ele) => {
+  ele.addEventListener("mouseup", () => {
+    clearTimeout(keysIntervalTracker);
+    clearTimeout(keysTimeoutTracker);
+  });
+};
+
+const continuosInput = (ele) => {
+  if (ele.id === "key-delete") {
+    ele.addEventListener("mousedown", () => {
+      keysTimeoutTracker = setTimeout(() => {
+        keysIntervalTracker = setInterval(() => {
+          deleteCharacter();
+          content.focus();
+        }, 100);
+      }, 500);
+    });
+    clearTimers(ele);
+  } else if (ele.id === "key-tab") {
+    ele.addEventListener("mousedown", () => {
+      keysTimeoutTracker = setTimeout(() => {
+        keysIntervalTracker = setInterval(() => {
+          content.value += "\t";
+          content.focus();
+        }, 100);
+      }, 500);
+    });
+    clearTimers(ele);
+  } else if (ele.id === "key-return") {
+    ele.addEventListener("mousedown", () => {
+      keysTimeoutTracker = setTimeout(() => {
+        keysIntervalTracker = setInterval(() => {
+          content.value += "\n";
+          content.focus();
+        }, 300);
+      }, 500);
+    });
+    clearTimers(ele);
+  } else if (ele.id === "key-space") {
+    ele.addEventListener("mousedown", () => {
+      keysTimeoutTracker = setTimeout(() => {
+        keysIntervalTracker = setInterval(() => {
+          content.value += " ";
+          content.focus();
+        }, 300);
+      }, 500);
+    });
+    clearTimers(ele);
+  } else {
+    ele.addEventListener("mousedown", () => {
+      keysTimeoutTracker = setTimeout(() => {
+        keysIntervalTracker = setInterval(() => {
+          shiftToggle
+            ? (content.value += ele.querySelector(
+                " .front > div:first-child"
+              ).innerText)
+            : (content.value += ele.querySelector(
+                ".front > div:last-child"
+              ).innerText);
+          content.focus();
+        }, 100);
+      }, 500);
+    });
+    clearTimers(ele);
+  }
+};
+
 all_keys.forEach((ele) => {
   ele.addEventListener("click", () => {
     if (!(ele.id === "key-delete")) {
@@ -79,7 +148,8 @@ all_keys.forEach((ele) => {
       !(ele.id === "key-option-r") &&
       !(ele.id === "key-command-l") &&
       !(ele.id === "key-option-r") &&
-      !(ele.id === "key-control")
+      !(ele.id === "key-control") &&
+      !(ele.id === "key-function")
     ) {
       content.focus();
     }
@@ -98,19 +168,22 @@ all_keys.forEach((ele) => {
     }
     case "key-delete": {
       ele.addEventListener("click", deleteCharacter);
-
+      continuosInput(ele);
       break;
     }
     case "key-tab": {
       ele.addEventListener("click", () => {
         content.value += "\t";
       });
+      continuosInput(ele);
       break;
     }
     case "key-return": {
       ele.addEventListener("click", () => {
         content.value += "\n";
       });
+      continuosInput(ele);
+      break;
     }
     case "key-command-l": {
     }
@@ -142,6 +215,7 @@ all_keys.forEach((ele) => {
       ele.addEventListener("click", () => {
         content.value += " ";
       });
+      continuosInput(ele);
       break;
     }
     default: {
@@ -154,6 +228,7 @@ all_keys.forEach((ele) => {
               ".front > div:last-child"
             ).innerText);
       });
+      continuosInput(ele);
     }
   }
 });
