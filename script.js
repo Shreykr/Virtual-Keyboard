@@ -100,6 +100,8 @@ all_keys.forEach((ele, index) => {
       ele.addEventListener("click", () => {
         content.value += "\n";
         content.focus();
+        audio.pause();
+        audio.currentTime = 0;
         audio.play();
       });
     }
@@ -143,6 +145,8 @@ all_keys.forEach((ele, index) => {
       ele.addEventListener("click", () => {
         content.value += " ";
         content.focus();
+        audio.pause();
+        audio.currentTime = 0;
         audio.play();
       });
       break;
