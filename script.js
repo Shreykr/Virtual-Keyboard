@@ -67,6 +67,10 @@ const clearTimers = (ele) => {
     clearTimeout(keysIntervalTracker);
     clearTimeout(keysTimeoutTracker);
   });
+  ele.addEventListener("mouseup", () => {
+    clearTimeout(keysIntervalTracker);
+    clearTimeout(keysTimeoutTracker);
+  });
 };
 
 const continuosInput = (ele) => {
