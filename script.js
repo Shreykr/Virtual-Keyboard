@@ -16,8 +16,6 @@ let shift_indicator_r = document.querySelector(
 let drawer = document.getElementById("drawer");
 let drawerStatus = false;
 let audio = new Audio("click.wav");
-let deleteTimeoutTracker;
-let deleteIntervalTracker;
 let keysTimeoutTracker;
 let keysIntervalTracker;
 
