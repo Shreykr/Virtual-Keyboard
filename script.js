@@ -63,7 +63,7 @@ const deleteCharacter = () => {
 };
 
 const clearTimers = (ele) => {
-  ele.addEventListener("mouseup", () => {
+  ele.addEventListener("mouseout", () => {
     clearTimeout(keysIntervalTracker);
     clearTimeout(keysTimeoutTracker);
   });
