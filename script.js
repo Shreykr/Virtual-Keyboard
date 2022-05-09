@@ -16,6 +16,8 @@ let shift_indicator_r = document.querySelector(
 let drawer = document.getElementById("drawer");
 let drawerStatus = false;
 let audio = new Audio("click.wav");
+let timeout_1;
+let timeout_2;
 
 const shiftCaseChange = () => {
   if (upperCase_shift) {
@@ -67,6 +69,20 @@ all_keys.forEach((ele) => {
       audio.currentTime = 0;
       audio.play();
     }
+    if (
+      !(ele.id === "key-caps") &&
+      !(ele.id === "key-shift-l") &&
+      !(ele.id === "key-shift-r") &&
+      !(ele.id === "key-delete") &&
+      !(ele.id === "close-button") &&
+      !(ele.id === "key-option-l") &&
+      !(ele.id === "key-option-r") &&
+      !(ele.id === "key-command-l") &&
+      !(ele.id === "key-option-r") &&
+      !(ele.id === "key-control")
+    ) {
+      content.focus();
+    }
   });
   switch (ele.id) {
     case "key-caps": {
@@ -82,19 +98,18 @@ all_keys.forEach((ele) => {
     }
     case "key-delete": {
       ele.addEventListener("click", deleteCharacter);
+
       break;
     }
     case "key-tab": {
       ele.addEventListener("click", () => {
         content.value += "\t";
-        content.focus();
       });
       break;
     }
     case "key-return": {
       ele.addEventListener("click", () => {
         content.value += "\n";
-        content.focus();
       });
     }
     case "key-command-l": {
@@ -110,9 +125,7 @@ all_keys.forEach((ele) => {
     case "key-function": {
       ele.addEventListener("click", () => {
         content.value += "";
-        content.focus();
       });
-
       break;
     }
     case "up-arrow": {
@@ -122,15 +135,12 @@ all_keys.forEach((ele) => {
     case "left-arrow": {
     }
     case "right-arrow": {
-      ele.addEventListener("click", () => {
-        content.focus();
-      });
+      ele.addEventListener("click", () => {});
       break;
     }
     case "key-space": {
       ele.addEventListener("click", () => {
         content.value += " ";
-        content.focus();
       });
       break;
     }
@@ -143,7 +153,6 @@ all_keys.forEach((ele) => {
           : (content.value += ele.querySelector(
               ".front > div:last-child"
             ).innerText);
-        content.focus();
       });
     }
   }
