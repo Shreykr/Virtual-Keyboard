@@ -28,9 +28,6 @@ const shiftCaseChange = () => {
     });
   }
   upperCase_shift = !upperCase_shift;
-  audio.pause();
-  audio.currentTime = 0;
-  audio.play();
 };
 
 const toggleCase = () => {
@@ -49,9 +46,6 @@ const toggleCase = () => {
     shiftCaseChange();
   }
   caps_indicator.classList.toggle("indicator-off");
-  audio.pause();
-  audio.currentTime = 0;
-  audio.play();
 };
 
 const shiftTogglerFn = () => {
@@ -59,9 +53,6 @@ const shiftTogglerFn = () => {
   shiftCaseChange();
   shift_indicator_l.classList.toggle("indicator-off");
   shift_indicator_r.classList.toggle("indicator-off");
-  audio.pause();
-  audio.currentTime = 0;
-  audio.play();
 };
 
 const deleteCharacter = () => {
@@ -69,7 +60,14 @@ const deleteCharacter = () => {
   content.focus();
 };
 
-all_keys.forEach((ele, index) => {
+all_keys.forEach((ele) => {
+  ele.addEventListener("click", () => {
+    if (!(ele.id === "key-delete")) {
+      audio.pause();
+      audio.currentTime = 0;
+      audio.play();
+    }
+  });
   switch (ele.id) {
     case "key-caps": {
       ele.addEventListener("click", toggleCase);
@@ -90,9 +88,6 @@ all_keys.forEach((ele, index) => {
       ele.addEventListener("click", () => {
         content.value += "\t";
         content.focus();
-        audio.pause();
-        audio.currentTime = 0;
-        audio.play();
       });
       break;
     }
@@ -100,9 +95,6 @@ all_keys.forEach((ele, index) => {
       ele.addEventListener("click", () => {
         content.value += "\n";
         content.focus();
-        audio.pause();
-        audio.currentTime = 0;
-        audio.play();
       });
     }
     case "key-command-l": {
@@ -119,9 +111,6 @@ all_keys.forEach((ele, index) => {
       ele.addEventListener("click", () => {
         content.value += "";
         content.focus();
-        audio.pause();
-        audio.currentTime = 0;
-        audio.play();
       });
 
       break;
@@ -134,9 +123,6 @@ all_keys.forEach((ele, index) => {
     }
     case "right-arrow": {
       ele.addEventListener("click", () => {
-        audio.pause();
-        audio.currentTime = 0;
-        audio.play();
         content.focus();
       });
       break;
@@ -145,9 +131,6 @@ all_keys.forEach((ele, index) => {
       ele.addEventListener("click", () => {
         content.value += " ";
         content.focus();
-        audio.pause();
-        audio.currentTime = 0;
-        audio.play();
       });
       break;
     }
@@ -161,9 +144,6 @@ all_keys.forEach((ele, index) => {
               ".front > div:last-child"
             ).innerText);
         content.focus();
-        audio.pause();
-        audio.currentTime = 0;
-        audio.play();
       });
     }
   }
@@ -172,9 +152,6 @@ all_keys.forEach((ele, index) => {
 closeButton.addEventListener("click", () => {
   drawer.classList.remove("drawer--open");
   textarea.style.marginBottom = "20px";
-  audio.pause();
-  audio.currentTime = 0;
-  audio.play();
 });
 
 content.addEventListener("click", () => {
