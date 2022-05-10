@@ -6,7 +6,6 @@ let all_keys = document.querySelectorAll(".keyboard__btn");
 let alphabets = document.querySelectorAll(".alphabet > .front > div");
 let caps_indicator = document.querySelector("#key-caps > .front > .indicator");
 let textarea = document.querySelector(".textarea-container");
-let closeButton = document.getElementById("close-button");
 let shift_indicator_l = document.querySelector(
   "#key-shift-l > .front > .indicator"
 );
@@ -220,6 +219,13 @@ all_keys.forEach((ele) => {
       continuosInput(ele);
       break;
     }
+    case "close-button": {
+      ele.addEventListener("click", () => {
+        drawer.classList.remove("drawer--open");
+        textarea.style.marginBottom = "20px";
+      });
+      break;
+    }
     default: {
       ele.addEventListener("click", () => {
         shiftToggle
@@ -233,11 +239,6 @@ all_keys.forEach((ele) => {
       continuosInput(ele);
     }
   }
-});
-
-closeButton.addEventListener("click", () => {
-  drawer.classList.remove("drawer--open");
-  textarea.style.marginBottom = "20px";
 });
 
 content.addEventListener("click", () => {
